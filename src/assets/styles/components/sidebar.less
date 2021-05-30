@@ -1,0 +1,114 @@
+.sidebar {
+    width: 196px;
+
+    .font-base();
+    font-size: 12px;
+    color: @color-black;
+
+    &__block-outer {
+        display: block;
+        margin-bottom: 6px;
+        padding-left: @shift-sidebar-block;
+        width: calc(100% + @shift-sidebar-block);
+
+        position: relative;
+        left: -1 * @shift-sidebar-block;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            padding: 0 @shift-sidebar-block 0 0;
+            color: inherit;
+
+            .sidebar__cross {
+                transition-delay: 0.5s;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__block {
+        width: 100%;
+        padding: 2px 4px 2px 0;
+
+        border-radius: 8px;
+        box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.1);
+        background-color: @color-block;
+
+        &._login {
+            padding: 4px 4px 8px;
+            margin-bottom: 6px;
+        }
+
+        &-row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 36px;
+            padding: 0 8px;
+
+            border-radius: inherit;
+
+            &._block {
+                flex-wrap: wrap;
+                height: 55px;
+                padding: 8px 14px;
+            }
+
+            &._login {
+                position: relative;
+                height: 40px;
+                margin-bottom: 8px;
+
+                .font-medium();
+                font-size: 13px;
+                text-align: center;
+                background-color: @color-block-login;
+
+                &:hover {
+                    color: inherit;
+                    background-color: @color-block-login-hover;
+                }
+            }
+        }
+
+        &-img {
+            margin-right: 8px;
+
+            &._login {
+                position: absolute;
+                left: 8px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+
+        &-text {
+            width: 100%;
+
+            &._medium {
+                .font-medium();
+            }
+        }
+    }
+
+    &__cross {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 15px;
+        right: 6px;
+
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0;
+        transition-delay: 0s;
+        transition-timing-function: ease-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
