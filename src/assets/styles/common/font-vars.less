@@ -1,16 +1,25 @@
 // задаем основные параметры шрифта в виде миксинов и переменных
 
-//@font-family: NotoSans, sans-serif;
-//@font-normal-size: 14px;
-//
-//.font-base() {
-//    font-family: @font-family;
-//    font-weight: 400;
-//    font-style: normal;
-//    font-size: @font-normal-size;
-//}
-//
-//.font-light() {
-//    .font-base();
-//    font-weight: 300;
-//}
+@main-font-family: 'YS Text', sans-serif;
+@optional-font-family: 'Verdana', sans-serif;
+
+.font-base() {
+   font-family: @main-font-family;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.font-medium() {
+   .font-base();
+   font-weight: 500;
+}
+
+.font-bold() {
+    .font-base();
+    font-weight: 600;
+}
+
+.optional-font() {
+    .font-base();
+    font-family: @optional-font-family;
+}

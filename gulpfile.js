@@ -39,6 +39,11 @@ gulp.task("svgstore", function () {
     .pipe(gulp.dest("./src"));
 });
 
+gulp.task("fonts", function() {
+    return src('./src/assets/fonts/*')
+      .pipe(dest('dist/fonts'))
+  })
+
 gulp.task("less", function () {
   return src("./src/assets/styles/main.less")
     .pipe(less())
@@ -68,6 +73,6 @@ gulp.task("serve", function () {
   gulp.watch("./dist/index.html").on("change", browserSync.reload);
 });
 
-gulp.task("build", series("svgstore", "less", "html"));
+gulp.task("build", series("fonts", "svgstore", "less", "html"));
 
-gulp.task("default", series("svgstore", parallel("html", "less"), "serve"));
+gulp.task("default", series("svgstore", "fonts", parallel("html", "less"), "serve"));

@@ -1,0 +1,45 @@
+.geoinfo {
+    display: flex;
+
+    .optional-font();
+    font-size: 11px;
+    color: @minor-text-color;
+
+    &__compass {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+
+    &__geolink {
+        margin-right: 17px;
+
+        .font-bold();
+        color: inherit;
+        font-size: 12px;
+
+        & svg {
+            fill: @minor-text-color;
+            transition: fill 0.15s ease-out;
+        }
+
+        &:hover {
+
+            & svg {
+                fill: @hover-color;
+            }
+        }
+    }
+
+    &__date {
+        margin-right: 5px;
+    }
+
+    &__time {
+        color: inherit;
+
+        &:hover {
+            .hover-change-color();
+        }
+    }  
+}

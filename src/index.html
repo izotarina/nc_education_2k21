@@ -1,20 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>test heroku</title>
+    <title>Яндекс</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body class="app">
-    <svg class="app__icon">
+    <!-- <svg class="app__icon">
         <use href="#icon-cloud"></use>
-    </svg>
+    </svg> -->
+
+    <header class="header app__header">
+        <div class="geoinfo header__geoinfo">
+            <a href="https://yandex.ru/tune/geo?retpath=https%3A%2F%2Fyandex.ru%2F&nosync=1" class="geoinfo__geolink">
+                <svg class="geoinfo__compass">
+                    <use href="#icon-compass"></use>
+                </svg>
+                <span class="geoinfo__town">Москва</span>
+            </a>
+            <div class="geoinfo__date">26 мая, среда</div>
+            <a target="_blank" href="https://yandex.ru/time" class="geoinfo__time">10:41</a>
+        </div>
+        
+        <div class="header__icons">
+            <a href="https://pokupki.market.yandex.ru/my/cart?utm_source=morda_header_icon&clid=956&purchase-referrer=morda_header_icon&wprid=1622015132.84085.85525.119990" class="header__icon header__icon_cart">
+            </a>
+            <a href="#" class="header__icon header__icon_notifications"></a>
+        </div>
+    </header>
+
+    <main class="main-section">
+        <div class="actual-data">
+            <div class="container actual-data__container">
+                <div class="actual-data__big-column">
+                    <div class="news">
+                        <div class="news__titles">
+                            <a target="_blank" href="https://yandex.ru/news?msid=1622321292.75687.85274.130468&mlid=1622320605.glob_225&utm_medium=topnews_news&utm_source=morda_desktop" class="news__title _active">Сейчас в СМИ</a>
+                            <a target="_blank" href="https://yandex.ru/news/region/moscow?msid=1622321757.8074.94749.137480&mlid=1622321098.geo_213&utm_source=morda_desktop&utm_medium=topnews_region" class="news__title">в Москве</a>
+                            <a target="_blank" href="https://yandex.ru/news/rubric/personal_feed?utm_medium=topnews_personal&utm_source=morda_desktop" class="news__title">Интересное</a>
+                        </div>
+
+                        <div class="news__articles">
+                            <a target="_blank" href="https://www.interfax.ru/world/768832" class="article">
+                                <div class="article__inner">
+                                    <div class="article__img">
+                                        <img src="https://www.interfax.ru/favicon.ico" alt="">
+                                    </div>
+                                    <span class="article__text">Три моряка погибли при столкновении японского и российского судов</span>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://www.vedomosti.ru/society/news/2021/05/26/871355-kommersant-detali-pohischeniya-roskosmosa" class="article">
+                                <div class="article__inner">
+                                    <div class="article__img">
+                                        <img src="https://cdn4.vedomosti.ru/icons/favicon-16x16.png" alt="">
+                                    </div>
+                                    <span class="article__text">&laquo;Коммерсантъ&raquo; узнал детали хищения у &laquo;Роскосмоса&raquo; более 1 млрд рублей</span>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://iz.ru/1169371/2021-05-26/zaderzhannoi-v-minske-rossiianke-sapege-grozit-do-12-let-tiurmy" class="article">
+                                <div class="article__inner">
+                                    <div class="article__img">
+                                        <img src="https://cdn.iz.ru/profiles/portal/themes/purple/images/favicons/favicon-16x16.png" alt="">
+                                    </div>
+                                    <span class="article__text">Задержанной в Минске россиянке Сапеге грозит до 12 лет тюрьмы</span>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://www.rbc.ru/politics/26/05/2021/60ad70bf9a79479e50f56105" class="article">
+                                <div class="article__inner">
+                                    <div class="article__img">
+                                        <img src="//s.rbk.ru/v10_rbcnews_static/common/common-react-1.0/images/favicon.png" alt="">
+                                    </div>
+                                    <span class="article__text">Байден назвал непродуктивным введение новых санкций против Nord Stream 2</span>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://iz.ru/1169326/2021-05-26/v-polshe-zaiavili-ob-upushchennykh-shansakh-v-otnosheniiakh-s-rf-iz-za-ukrainy" class="article">
+                                <div class="article__inner">
+                                    <div class="article__img">
+                                        <img src="https://cdn.iz.ru/profiles/portal/themes/purple/images/favicons/favicon-16x16.png" alt="">
+                                    </div>
+                                    <span class="article__text">В Польше заявили об упущенных шансах в отношениях с РФ из-за Украины</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="news__rates">
+                            <div class="rate">
+                                <a target="_blank" href="https://yandex.ru/news/quotes/2002.html" class="rate__name">USD</a>
+                                <span class="rate__value">73,47</span>
+                                <span class="rate__difference">&ndash;0,03</span>
+                            </div>
+                            <div class="rate">
+                                <a target="_blank" href="https://yandex.ru/news/quotes/2000.html" class="rate__name">EUR</a>
+                                <span class="rate__value">89,92</span>
+                                <span class="rate__difference">&ndash;0,11</span>
+                            </div>
+                            <div class="rate">
+                                <a target="_blank" href="https://yandex.ru/news/quotes/1006.html" class="rate__name">НЕФТЬ</a>
+                                <span class="rate__value">69,09</span>
+                                <span class="rate__difference">+0,74%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="actual-data__small-column">
+                    <div class="weather">
+                        <a target="_blank" href="https://yandex.ru/pogoda/moscow?utm_source=home&utm_content=main_informer&utm_campaign=informer&utm_medium=web&utm_term=title" class="weather__title">Погода</a>
+                        <a target="_blank" href="https://yandex.ru/pogoda/moscow/maps/nowcast?utm_campaign=informer&utm_content=main_informer&utm_term=nowcast_link&utm_medium=web&utm_source=home&le_Lightning=1" class="weather__subtitle">Карта осадков</a>
+
+                        <div class="weather__inner">
+                            <a target="_blank" href="https://yandex.ru/pogoda/moscow?utm_source=home&utm_content=main_informer&utm_campaign=informer&utm_medium=web&utm_term=main_number" class="weather__main">
+                                <img src="//yastatic.net/weather/i/icons/funky/dark/skc_d.svg" alt="" class="weather__img-main">
+                                <span class="weather__value-main">+22&deg;</span>
+                            </a>
+
+                            <a target="_blank" href="https://yandex.ru/pogoda/moscow?utm_source=home&utm_content=main_informer&utm_campaign=informer&utm_medium=web&utm_term=next_day_part" class="weather__secondary">
+                                <p class="weather__name-secondary">Днём</p>
+                                <img src="//yastatic.net/weather/i/icons/funky/dark/skc_d.svg" alt="" class="weather__img-secondary">
+                                <span class="weather__value-secondary">23&deg;</span>
+                            </a>
+                            <a target="_blank" href="https://yandex.ru/pogoda/moscow?utm_source=home&utm_content=main_informer&utm_campaign=informer&utm_medium=web&utm_term=next_day_part" class="weather__secondary">
+                                <p class="weather__name-secondary">Вечером</p>
+                                <img src="//yastatic.net/weather/i/icons/funky/dark/bkn_n.svg" alt="" class="weather__img-secondary">
+                                <span class="weather__value-secondary">20&deg;</span>
+                            </a>
+                            <a target="_blank" href="https://yandex.ru/pogoda/moscow?utm_source=home&utm_content=main_informer&utm_campaign=informer&utm_medium=web&utm_term=next_day_part" class="weather__secondary">
+                                <p class="weather__name-secondary">Ночью</p>
+                                <img src="//yastatic.net/weather/i/icons/funky/dark/ovc_-ra.svg" alt="" class="weather__img-secondary">
+                                <span class="weather__value-secondary">15&deg;</span>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="actual-data__traffic-jams traffic-jams">
+                        <a target="_blank" href="https://yandex.ru/maps/213/moscow/?l=trf%2Ctrfe&ll=37.622504%2C55.753215&z=10" class="traffic-jams__title">Пробки</a>
+                        <a target="_blank" href="https://yandex.ru/metro/moscow?focus=0&scheme_id=sc34974011" class="traffic-jams__subtitle">Метро</a>
+                        <a target="_blank" href="https://rasp.yandex.ru/?utm_source=yamain&utm_medium=geoblock&utm_campaign=main" class="traffic-jams__subtitle">Расписания</a>
+                        <a target="_blank" href="https://taxi.yandex.ru/?utm_source=yandex-geoblock&utm_medium=morda&utm_campaign=[YT]DT_UA-goal_RU-ALL-ALL&utm_content=title-taxi" class="traffic-jams__subtitle">Такси</a>
+
+                        <div class="traffic-jams__inner">
+                            <a target="_blank" href="https://yandex.ru/maps/213/moscow/?l=trf%2Ctrfe&ll=37.622504%2C55.753215&z=10" class="traffic-jams__main">
+                                <img src="//yastatic.net/s3/home-static/_/t/n/RM2IxJqDgcoNFZNbH1g6NU8l0.svg" alt="" class="traffic-jams__img-main">
+                                <span class="traffic-jams__value-main">6</span>
+                            </a>
+                            <a target="_blank" href="https://yandex.ru/maps/213/moscow/?l=trf%2Ctrfe&ll=37.622504%2C55.753215&z=10" class="traffic-jams__text">Ближайшие 5 часов движение затруднено</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <div class="app__svg-store _hidden">
         <!-- inject:svg -->
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-cloud" viewBox="0 0 500 550"><path d="M459.1 237.05c0-17.2-3.801-32.5-11.5-45.9h1.9c26.799 0 47.799-21 47.799-47.8 0-24.9-17.199-44-42.1-47.8-7.699-23-28.699-38.2-53.5-38.2-3.799 0-9.6 0-13.4 1.9-9.6-13.4-26.799-21-44-21-32.5 0-57.398 24.9-57.398 57.4v1.9c-11.5 1.9-21 7.6-28.701 17.2-19.1-11.5-42.1-19.1-66.9-19.1-74.6 0-133.9 59.3-133.9 133.9v7.6C23 252.45 0 284.95 0 325.15c0 34.4 17.2 65 44 80.301-3.8 7.699-5.7 15.3-5.7 24.899 0 26.8 21 47.8 47.8 47.8h153c26.801 0 47.801-21 47.801-47.8 0-3.8 0-5.7-1.9-9.6H420.8c53.5 0 95.602-42.101 95.602-95.601.098-40.299-22.902-72.799-57.302-88.099zm-162.6-122.4h15.299c-3.799-5.7-5.699-11.5-5.699-19.1 0-21 17.199-38.2 38.199-38.2 17.201 0 30.602 11.5 36.301 24.9 5.699-3.8 13.4-5.7 21-5.7 21 0 38.199 17.2 38.199 38.2h9.602c15.299 0 28.699 13.4 28.699 28.7 0 15.3-13.4 28.7-28.699 28.7H434.1c-19.1-23-47.801-38.2-80.301-38.2-21 0-38.199 5.7-55.5 15.3-7.699-9.6-15.299-17.2-24.898-24.9 5.898-5.8 13.499-9.7 23.099-9.7zm-57.4 344.301h-153c-15.3 0-28.7-13.4-28.7-28.7s13.4-28.7 28.7-28.7h15.3c-3.8-5.7-5.7-11.5-5.7-19.1 0-21 17.2-38.2 38.2-38.2 17.2 0 30.6 11.5 36.3 24.899 5.7-3.8 13.4-5.699 21-5.699 21 0 38.2 17.199 38.2 38.199h9.6c15.3 0 28.7 13.4 28.7 28.7s-13.3 28.601-28.6 28.601zm181.699-57.401H277.4c-7.602-9.6-19.101-17.2-32.5-19.1-7.6-23-28.7-38.2-53.5-38.2-3.8 0-9.6 0-13.4 1.899-9.6-13.399-26.8-21-44-21-32.5 0-57.4 24.9-57.4 57.4v1.9c-7.7 1.899-13.4 3.8-19.1 7.6-23-13.4-38.2-38.2-38.2-66.9 0-36.3 24.9-66.899 59.3-74.6-1.9-7.7-1.9-13.4-1.9-21 0-63.1 51.6-114.8 114.8-114.8 44 0 84.1 24.9 103.299 63.1 15.301-15.3 36.301-24.9 59.301-24.9 47.801 0 86.1 38.2 86.1 86.1v11.5c32.5 7.6 57.4 38.2 57.4 74.6-.301 42.001-34.7 76.401-76.801 76.401z"/></symbol></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-cloud" viewBox="0 0 500 550"><path d="M459.1 237.05c0-17.2-3.801-32.5-11.5-45.9h1.9c26.799 0 47.799-21 47.799-47.8 0-24.9-17.199-44-42.1-47.8-7.699-23-28.699-38.2-53.5-38.2-3.799 0-9.6 0-13.4 1.9-9.6-13.4-26.799-21-44-21-32.5 0-57.398 24.9-57.398 57.4v1.9c-11.5 1.9-21 7.6-28.701 17.2-19.1-11.5-42.1-19.1-66.9-19.1-74.6 0-133.9 59.3-133.9 133.9v7.6C23 252.45 0 284.95 0 325.15c0 34.4 17.2 65 44 80.301-3.8 7.699-5.7 15.3-5.7 24.899 0 26.8 21 47.8 47.8 47.8h153c26.801 0 47.801-21 47.801-47.8 0-3.8 0-5.7-1.9-9.6H420.8c53.5 0 95.602-42.101 95.602-95.601.098-40.299-22.902-72.799-57.302-88.099zm-162.6-122.4h15.299c-3.799-5.7-5.699-11.5-5.699-19.1 0-21 17.199-38.2 38.199-38.2 17.201 0 30.602 11.5 36.301 24.9 5.699-3.8 13.4-5.7 21-5.7 21 0 38.199 17.2 38.199 38.2h9.602c15.299 0 28.699 13.4 28.699 28.7 0 15.3-13.4 28.7-28.699 28.7H434.1c-19.1-23-47.801-38.2-80.301-38.2-21 0-38.199 5.7-55.5 15.3-7.699-9.6-15.299-17.2-24.898-24.9 5.898-5.8 13.499-9.7 23.099-9.7zm-57.4 344.301h-153c-15.3 0-28.7-13.4-28.7-28.7s13.4-28.7 28.7-28.7h15.3c-3.8-5.7-5.7-11.5-5.7-19.1 0-21 17.2-38.2 38.2-38.2 17.2 0 30.6 11.5 36.3 24.899 5.7-3.8 13.4-5.699 21-5.699 21 0 38.2 17.199 38.2 38.199h9.6c15.3 0 28.7 13.4 28.7 28.7s-13.3 28.601-28.6 28.601zm181.699-57.401H277.4c-7.602-9.6-19.101-17.2-32.5-19.1-7.6-23-28.7-38.2-53.5-38.2-3.8 0-9.6 0-13.4 1.899-9.6-13.399-26.8-21-44-21-32.5 0-57.4 24.9-57.4 57.4v1.9c-7.7 1.899-13.4 3.8-19.1 7.6-23-13.4-38.2-38.2-38.2-66.9 0-36.3 24.9-66.899 59.3-74.6-1.9-7.7-1.9-13.4-1.9-21 0-63.1 51.6-114.8 114.8-114.8 44 0 84.1 24.9 103.299 63.1 15.301-15.3 36.301-24.9 59.301-24.9 47.801 0 86.1 38.2 86.1 86.1v11.5c32.5 7.6 57.4 38.2 57.4 74.6-.301 42.001-34.7 76.401-76.801 76.401z"/></symbol><symbol id="icon-compass" viewBox="0 0 511.998 511.998"><path d="M505.743 6.249c-6.08-6.101-15.211-7.893-23.168-4.672l-469.333 192C4.474 197.182-.881 206.121.122 215.55a21.33 21.33 0 0017.387 18.773l220.139 40.021 40.043 220.139c1.685 9.323 9.323 16.405 18.752 17.408.747.064 1.493.107 2.219.107 8.576 0 16.448-5.184 19.755-13.269l192-469.333a21.34 21.34 0 00-4.674-23.147z"/></symbol></svg>
         <!-- endinject -->
     </div>
 </body>

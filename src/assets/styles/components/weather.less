@@ -1,0 +1,66 @@
+.weather {
+    color: @black-color;
+    .font-base();
+    font-size: 16px;
+
+    &__title {
+        margin-right: 8px;
+
+        .font-medium();
+        color: @title-color;
+    }
+
+    &__subtitle {
+        font-size: 13px;
+        color: @title-color;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        // margin-right: 2px;
+    }
+
+    &__img-main {
+        height: 47px;
+        width: 47px;
+        display: block;
+    }
+
+    &__value-main {
+        margin: 0 6px 0 5px;
+
+        font-size: 26px;
+        color: inherit;
+    }
+
+    &__secondary {
+        margin-right: 5px;
+    }
+
+    &__name-secondary {
+        margin: 0;
+
+        color: @minor-text-color;
+        font-size: 9px;
+        text-align: center;
+    }
+
+    &__value-secondary {
+        display: inline-table;
+        vertical-align: 20%;
+
+        color: inherit;
+        font-size: 12px;
+    }
+
+    &__img-secondary {
+        width: 20px;
+        height: 20px;
+    }
+}
