@@ -1,0 +1,50 @@
+.services {
+    color: @color-black;
+
+    &__container {
+        max-width: 950px;
+        margin-top: 18px;
+        position: relative;
+        left: -12px;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+            .services__img {
+                transform: translate(0, -5px);
+            }
+        }
+
+        &:first-child::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 25px;
+            right: 0;
+            top: 10px;
+            
+            background-color: @color-block-login;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 44px;
+        height: 44px;
+        margin: 0 25.613px 2px;
+
+        transition: transform 0.15s ease-out;
+    }
+
+    &__text {
+        color: inherit;
+        .font-base();
+        font-size: 12px;
+    }
+}
