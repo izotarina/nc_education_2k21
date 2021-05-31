@@ -1,5 +1,7 @@
 .news {
     &__titles {
+        display: flex;
+
         .font-medium();
         font-size: 16px;
         color: @color-title-not-active;
@@ -9,8 +11,8 @@
         color: inherit;
         margin-right: 10px;
 
-        &:last-child {
-            margin-right: 0;
+        &:last-of-type {
+            margin-right: 2px;
         }
 
         &._active {
@@ -22,10 +24,18 @@
         }
     }
 
-    .news__rates {
+    &__rates {
         display: flex;
         margin-top: 7px;
         width: 343px;
         justify-content: space-between;
+    }
+
+    &:hover .title-settings {
+        opacity: 0.24;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }

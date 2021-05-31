@@ -3,6 +3,11 @@
     .font-base();
     font-size: 16px;
 
+    &__titles {
+        display: flex;
+        align-items: flex-end;
+    }
+
     &__title {
         margin-right: 8px;
 
@@ -14,6 +19,7 @@
         font-size: 13px;
         color: @color-title;
     }
+
 
     &__inner {
         display: flex;
@@ -61,5 +67,13 @@
     &__img-secondary {
         width: 20px;
         height: 20px;
+    }
+
+    &:hover .title-settings {
+        opacity: 0.24;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
