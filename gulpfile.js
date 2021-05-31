@@ -7,7 +7,8 @@ const gulp = require("gulp"),
   less = require("gulp-less"),
   autoprefixer = require("gulp-autoprefixer"),
   browserSync = require("browser-sync").create(),
-  rename = require("gulp-rename");
+  rename = require("gulp-rename"),
+  concat = require("gulp-concat");
 
 gulp.task("svgstore", function () {
   const svgs = gulp
@@ -38,6 +39,12 @@ gulp.task("svgstore", function () {
     .pipe(inject(svgs, { transform: fileContents }))
     .pipe(gulp.dest("./src"));
 });
+
+gulp.task('scripts', function() {
+    return gulp.src('./src/assets/scripts/*.js') // путь к папке со скриптами
+     .pipe(concat('main.js')) // в какой файл объединить
+     .pipe(gulp.dest('./dist'));
+  });
 
 gulp.task("fonts", function() {
     return src('./src/assets/fonts/*')
@@ -73,6 +80,6 @@ gulp.task("serve", function () {
   gulp.watch("./dist/index.html").on("change", browserSync.reload);
 });
 
-gulp.task("build", series("fonts", "svgstore", "less", "html"));
+gulp.task("build", series("fonts", "svgstore", "scripts", "less", "html"));
 
-gulp.task("default", series("svgstore", "fonts", parallel("html", "less"), "serve"));
+gulp.task("default", series("svgstore", "fonts", parallel("html", "less", "scripts"), "serve"));

@@ -41,5 +41,24 @@
         &:hover {
             .hover-change-color();
         }
+
+        &-colon {
+            animation: blink 2s none 0s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            49.99% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     }  
 }
