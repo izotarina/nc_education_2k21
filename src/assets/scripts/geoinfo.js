@@ -20,7 +20,11 @@ setTimeout(function() {
 
 function setTime(elem) {
     date = new Date();
-    elem.innerHTML = date.getHours() + '<span class="geoinfo__time-colon">:</span>' + date.getMinutes();
+    elem.innerHTML = formatTime(date.getHours()) + '<span class="geoinfo__time-colon">:</span>' + formatTime(date.getMinutes());
+}
+
+function formatTime(time) {
+    return ('0' + time).slice(-2);
 }
 
 function setDate(elem) {
