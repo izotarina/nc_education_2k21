@@ -1,0 +1,29 @@
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    transition: 0.15s ease-out;
+
+    .font-base();
+    font-size: 0.8rem;
+
+    &:hover {
+        background-color: @color-background-icon-hover;
+        color: black;
+    }
+
+    &._share {
+        width: 120px;
+        border-radius: 1rem;
+    }
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+    }
+}

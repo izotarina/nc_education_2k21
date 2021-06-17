@@ -1,0 +1,49 @@
+.zen {
+    .container();
+    max-width: 918px;
+    position: relative;
+    left: -9px;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+
+        &-link {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: black;
+            }
+
+            &:hover .zen__heading-icon {
+                filter: brightness(50%);
+            }
+        }
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        &-title {
+            .font-medium();
+            font-size: 1rem;
+            margin: 0 7px;
+        }
+
+        &-subtitle {
+            .font-base();
+            color: @color-minor-text;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 57% 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
