@@ -18,7 +18,7 @@ let items;
 })();
 
 async function /*Promise<json>*/ getJSONAsync(url) {
-    let response = await fetch(/*"http://cors-anywhere.herokuapp.com/" + */url);
+    let response = await fetch("https://obscure-scrubland-30498.herokuapp.com/" + url);
     if (response.ok) {
         let json = await response.json();
         return json;
