@@ -17,7 +17,7 @@ let items;
     })    
 })();
 
-async function /*Promise<json>*/ getJSONAsync(url) {
+async function getJSONAsync(url) {
     let response = await fetch("https://obscure-scrubland-30498.herokuapp.com/" + url);
     if (response.ok) {
         let json = await response.json();
@@ -38,8 +38,8 @@ async function showCards(count = 6) {
 
     do {
         if (itemNumber == items.length) {
-            items = await getJson();
             itemNumber = 0;
+            items = await getJson();
         }
 
         if (items[itemNumber].type == 'card' ||
